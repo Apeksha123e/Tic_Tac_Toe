@@ -3,17 +3,15 @@ from graphics import board, welcome, add_mark
 from rules import (MOVES, BOARD_ARRAY, BOARD_ARRAY_MOVES, TURNS, PLAYERS, PLAYER_NUM,
                    check_winner, find_coordinate)
 
-
 print(welcome)
 print(board)
-
 
 while True:
     PLAYER_NUM %= len(PLAYERS)  # This variable takes player mark number.
     player = PLAYERS[PLAYER_NUM]  # From list of marks ['X', 'O'] variable takes 'X' or 'O'.
 
     player_input = find_coordinate(MOVES, player)  # Function checks if coordinate that user give exist
-                                                   # in the dictionary of possible coordinations.
+    # in the dictionary of possible coordinations.
     board_place = MOVES[player_input]  # Specific '-' character index number taken from given coordination.
 
     del MOVES[player_input]  # After user selects coordinate it is deleted from dictionary to avoid repeatability.
@@ -39,9 +37,3 @@ while True:
     if TURNS <= 0:
         print("It is a draw.")
         break
-
-
-
-
-
-

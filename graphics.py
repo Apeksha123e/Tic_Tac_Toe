@@ -1,4 +1,4 @@
-welcome ="""
+welcome = """
  __      __       .__                                  __               
 /  \    /  \ ____ |  |   ____  ____   _____   ____   _/  |_  ____       
 \   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \  \   __\/  _ \      
@@ -44,4 +44,3 @@ def add_mark(board_ascii: str, char_index: int, mark: str) -> str:
     list_board[char_index] = mark
     board_updated = "".join(list_board)
     return board_updated
-
